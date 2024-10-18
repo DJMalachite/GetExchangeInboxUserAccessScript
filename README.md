@@ -18,7 +18,7 @@ Once thats confirmed you can move onto the next step
 
 ### Customizing the script before running
 Before running the script you can edit the `Exclude` List which is used to filter out accounts such as `admin` or `SERVICE` 	
-Edit the `Where-Object {` List to include your own excludes by adding 
+- Edit the `Where-Object {` List to include your own excludes by adding 
 - `$userStr -notlike '*<EDIT>*' -and` below the second last entry
 
 Edit the `<EDIT>` to the object you would like excluded.
