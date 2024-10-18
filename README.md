@@ -10,27 +10,29 @@ Before running the script make sure you are logged into the Exhange Management S
 You may have to change the execution policy to `RemoteSigned` to get the script to run
 You can check the current set policy using `Get-ExecutionPolicy -List | FL`
 Look for the LocalMachine scope which should look like this
-`Scope:LocalMachine`
-`ExcutionPolicy:RemoteSigned`
+`Scope			: LocalMachine`
+`ExcutionPolicy  : RemoteSigned`
 
 
 Once thats confirmed you can move onto the next step
 
 ### Customizing the script before running
 Before running the script you can edit the `Exclude` List which is used to filter out accounts such as `admin` or `SERVICE` 	
-Edit the `Where-Object {` List to include your own excludes by adding `# $userStr -notlike '*<EDIT>*' -and` below the second last entry
-Edit thie `<EDIT>` to the object you would like excluded.
+Edit the `Where-Object {` List to include your own excludes by adding 
+- `$userStr -notlike '*<EDIT>*' -and` below the second last entry
+
+Edit the `<EDIT>` to the object you would like excluded.
 
 By default this list includes these accounts:
-`'badminuser'`
-`admin`
-`Servers`
-`Management`
-`SELF`
-`Setup`
-`SERVICE`
-`system`
 
+ - `'badminuser'`
+ -  `admin`
+ -  `Servers` 
+ -  `Management` 
+  - `SELF` 
+  - `Setup`
+  - `SERVICE` 
+  - `system`
 
 ### Running the script
 Once you have customised the script to your liking in the Exchange Managment Console Run the script from the Directory its stored in
