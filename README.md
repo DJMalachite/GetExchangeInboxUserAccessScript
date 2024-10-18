@@ -10,8 +10,8 @@ Before running the script make sure you are logged into the Exhange Management S
 You may have to change the execution policy to `RemoteSigned` to get the script to run
 You can check the current set policy using `Get-ExecutionPolicy -List | FL`
 Look for the LocalMachine scope which should look like this
-`Scope			: LocalMachine`
-`ExcutionPolicy  : RemoteSigned`
+`Scope:LocalMachine`
+`ExcutionPolicy:RemoteSigned`
 
 
 Once thats confirmed you can move onto the next step
